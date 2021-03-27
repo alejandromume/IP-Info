@@ -29,7 +29,7 @@ class getIPInfo {
         fetch("http://ip-api.com/json/"+servercode)
                     .then(res => res.json())
                     .then((out) => {
-                        send(out["City"]);
+                        send(out["city"]);
                     })
                 })
     }
