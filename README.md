@@ -1,5 +1,10 @@
 # IP Info 3
 
+![d](https://img.shields.io/badge/ip--info3-v1.0.1-red)
+
+
+Package: https://www.npmjs.com/package/ip-info3
+
 ## <ins>Description
 * A simple package for get a lot of info about a IP address
 ## <ins>Install
