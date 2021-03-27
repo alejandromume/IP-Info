@@ -55,4 +55,35 @@ getinfo.GetRegionName("90.90.90.90").then(data => {
 >> Île-de-France
 ```
 
+---
+```js
+const IPInfo = require("ip-info3")
+const getinfo = new IPInfo.getIPInfo();
+
+getinfo.GetAll("90.90.90.90").then(data => {
+    console.log(data)
+});
+```
+
+<ins>Output
+```json
+>> {
+   "status":"success",
+   "country":"France",
+   "countryCode":"FR",
+   "region":"IDF",
+   "regionName":"Île-de-France",
+   "city":"Paris",
+   "zip":"75018",
+   "lat":48.8323,
+   "lon":2.4075,
+   "timezone":"Europe/Paris",
+   "isp":"Orange S.A.",
+   "org":"G-Core Labs",
+   "as":"AS3215 Orange S.A.",
+   "query":"90.90.90.90"
+}
+```
+
+
 
