@@ -1,121 +1,5 @@
 const fetch = require("node-fetch")
 
-class getInfo {
-
-    GetName(servercode){
-        return new Promise((send, err) => {
-            fetch("https://servers-live.fivem.net/api/servers/single/"+servercode)
-            .then(res => res.json())
-            .then((out) => {
-                send(out["Data"]["hostname"]);
-            })
-        })
-        
-    }
-
-    GetAll(servercode){
-        return new Promise((send, err) => {
-        fetch("https://servers-live.fivem.net/api/servers/single/"+servercode)
-                    .then(res => res.json())
-                    .then((out) => {
-                        send(out);
-                    })
-
-                })
-    }
-    
-
-    GetEndpoint(servercode){
-        return new Promise((send, err) => {
-        fetch("https://servers-live.fivem.net/api/servers/single/"+servercode)
-                    .then(res => res.json())
-                    .then((out) => {
-                        send(out["Data"]["connectEndPoints"][0]);
-                    })
-
-                })
-    }
-
-    GetPlayersCount(servercode){
-        return new Promise((send, err) => {
-
-        fetch("https://servers-live.fivem.net/api/servers/single/"+servercode)
-                    .then(res => res.json())
-                    .then((out) => {
-                        send(out["Data"]["players"].length);
-                    })
-                })
-    }
-
-    GetResourcesCount(servercode){
-        return new Promise((send, err) => {
-
-        fetch("https://servers-live.fivem.net/api/servers/single/"+servercode)
-                    .then(res => res.json())
-                    .then((out) => {
-                        send(out["Data"]["resources"].length);
-                    })
-                })
-    }
-
-    GetMaxPlayers(servercode){
-        return new Promise((send, err) => {
-
-        fetch("https://servers-live.fivem.net/api/servers/single/"+servercode)
-                    .then(res => res.json())
-                    .then((out) => {
-                        send(out["Data"]["svMaxclients"]);
-                    })
-                })
-    }
-
-    GetArtifacts(servercode){
-        return new Promise((send, err) => {
-
-        fetch("https://servers-live.fivem.net/api/servers/single/"+servercode)
-                    .then(res => res.json())
-                    .then((out) => {
-                        send(out["Data"]["server"]);
-                    })
-                })
-    }
-
-    GetVars(servercode){
-        return new Promise((send, err) => {
-
-        fetch("https://servers-live.fivem.net/api/servers/single/"+servercode)
-                    .then(res => res.json())
-                    .then((out) => {
-                        send(out["Data"]["vars"]);
-                    })
-                })
-    }
-
-    GetResources(servercode){
-        return new Promise((send, err) => {
-
-        fetch("https://servers-live.fivem.net/api/servers/single/"+servercode)
-                    .then(res => res.json())
-                    .then((out) => {
-                        send(out["Data"]["resources"]);
-                    })
-                })
-    }
-
-    GetGameType(servercode){
-        return new Promise((send, err) => {
-
-        fetch("https://servers-live.fivem.net/api/servers/single/"+servercode)
-                    .then(res => res.json())
-                    .then((out) => {
-                        send(out["Data"]["gametype"]);
-                    })
-                })
-    }
-
-    
-}
-
 class getIPInfo {
     GetAll(servercode){
         return new Promise((send, err) => {
@@ -193,8 +77,62 @@ class getIPInfo {
                     })
                 })
     }
+
+    GetRegion(servercode){
+        return new Promise((send, err) => {
+
+        fetch("http://ip-api.com/json/"+servercode)
+                    .then(res => res.json())
+                    .then((out) => {
+                        send(out["region"]);
+                    })
+                })
+    }
+
+    GetRegionName(servercode){
+        return new Promise((send, err) => {
+
+        fetch("http://ip-api.com/json/"+servercode)
+                    .then(res => res.json())
+                    .then((out) => {
+                        send(out["regionName"]);
+                    })
+                })
+    }
+
+    GetQueryStatus(servercode){
+        return new Promise((send, err) => {
+
+        fetch("http://ip-api.com/json/"+servercode)
+                    .then(res => res.json())
+                    .then((out) => {
+                        send(out["status"]);
+                    })
+                })
+    }
+
+    GetTimezone(servercode){
+        return new Promise((send, err) => {
+
+        fetch("http://ip-api.com/json/"+servercode)
+                    .then(res => res.json())
+                    .then((out) => {
+                        send(out["timezone"]);
+                    })
+                })
+    }
+
+    GetZip(servercode){
+        return new Promise((send, err) => {
+
+        fetch("http://ip-api.com/json/"+servercode)
+                    .then(res => res.json())
+                    .then((out) => {
+                        send(out["zip"]);
+                    })
+                })
+    }
     
 }
 
-module.exports.getInfo = getInfo;
 module.exports.getIPInfo = getIPInfo;
