@@ -1,7 +1,7 @@
 {
-  "name": "ip-info",
-  "version": "1.0.0",
-  "description": "",
+  "name": "ip-info3",
+  "version": "1.0.4",
+  "description": "A simple package for get a lot of info about a IP address",
   "main": "index.js",
   "dependencies": {
     "node-fetch": "^2.6.1"
@@ -10,6 +10,20 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "alejandromume",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git://https://github.com/alejandromume/ip-info3.git"
+  },
+  "keywords": [
+    "ip"
+  ],
+  "bugs": {
+    "url": "https://github.com/alejandromume/ip-info3/issues"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
+  },
+  "homepage": "https://github.com/alejandromume/ip-info3#readme"
 }
