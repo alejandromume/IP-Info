@@ -1,6 +1,6 @@
 # IP Info 3
 
-![d](https://img.shields.io/badge/ip--info3-v1.0.1-red)
+![d](https://img.shields.io/badge/ip--info3-v1.0.6-red)
 
 Package: https://www.npmjs.com/package/ip-info3
 
